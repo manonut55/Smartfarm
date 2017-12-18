@@ -11,10 +11,16 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap-vue": "^1.1.0",
+    "canvas-gauges": "^2.1.4",
     "chart.js": "^2.7.1",
     "firebase": "^4.6.2",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-canvas-gauges": "0.0.0",
+    "vue-router": "^3.0.1",
+    "vue2-canvas-gauges": "0.0.0",
+    "vuefire": "^1.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
