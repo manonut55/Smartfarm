@@ -1,9 +1,7 @@
 <template>
   <div class="Show">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
- <div class="row no-gutters">
+  <div class="row no-gutters">
    <div class="col-12">
      <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,11 +27,7 @@
      </div>
      </nav>
    </div>
-   <div class="col-4" >.col-6fffffffffffffff<br>
-   </div>
-   <div class="col-6">.col-6<br>
      <canvas id="myLineChart" width="400" height="400"></canvas>
-   </div>
  </div>
 </div>
 </template>
