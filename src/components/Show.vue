@@ -1,8 +1,6 @@
 <template>
   <div class="Show">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <div class="row no-gutters">
-   <div class="col-12">
      <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
@@ -26,10 +24,8 @@
      </form>
      </div>
      </nav>
+        <canvas id="myLineChart" width="400" height="400"></canvas>
    </div>
-     <canvas id="myLineChart" width="400" height="400"></canvas>
- </div>
-</div>
 </template>
 <script>
 import Chart from 'Chart.js'

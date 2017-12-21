@@ -23,7 +23,11 @@
             </div>
         </div>
       </div>
-    </div>
+    </div><br>
+      <div class="container">
+              <button type="button" class="btn btn-danger">Danger</button>
+      </div>
+
   </div>
 </template>
 <script>
@@ -38,10 +42,7 @@ export default {
 }
 </script>
 <style lang="css">
-.col-6{
-  border-style: ridge;
-  border-color: blue;
-}
+
 .progress{
     width: 150px;
     height: 150px;

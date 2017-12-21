@@ -85,7 +85,6 @@
     </div>
 </template>
 <script>
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
 // import Chart from 'Chart.js'
 import { db } from './firebase.js'
 export default {
@@ -147,8 +146,5 @@ export default {
 }
 </script>
 <style lang="css">
-.col-6{
-  border-style: ridge;
-  border-color: blue;
-}
+
 </style>
