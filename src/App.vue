@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-     <div class="" v-if="npk < 30">
-      hmhmhmhmhmh
-    </div>
       <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
       <div class="row" >
         <img src="\pic\top.jpg" class="img-fluid" alt="top.jpg" width= 100%  >
@@ -36,7 +33,7 @@
               <router-link to="gg">
                 <button type="button" class="btn btn-primary col-xl">Primary</button>
               </router-link>
-              <router-link to="home">
+              <router-link to="npkalert">
                 <button type="button" class="btn btn-primary col-xl">Primary</button>
               </router-link>
               <router-link to="home">
@@ -45,6 +42,12 @@
               <router-link to="home">
                 <button type="button" class="btn btn-primary col-xl">Primary</button>
               </router-link>
+              <div class="" v-if="npk < 30">
+                <div class="container">
+                  gvghvjhcvugcytu
+               <npkalert></npkalert>
+             </div>
+             </div>
             </div>
         <div class="col-sm-10" >
           <div class="container">
@@ -56,12 +59,16 @@
   </div>
 </template>
 <script>
+import Npkalert from '@/components/Npkalert.vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 export default {
   name: 'app',
+  components: {
+    Npkalert: Npkalert
+  },
   data () {
     return {
-      npk: 50
+      npk: 20
     }
   }
 }

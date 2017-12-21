@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Gg from '@/components/Gg'
+import gg from '@/components/gg'
 import Show from '@/components/Show'
 import Home from '@/components/Home'
+import Npkalert from '@/components/Npkalert'
 Vue.use(Router)
 
 export default new Router({
@@ -21,12 +22,17 @@ export default new Router({
     {
       path: '/gg',
       name: 'gg',
-      component: Gg
+      component: gg
     },
     {
       path: '/show',
       name: 'show',
       component: Show
+    },
+    {
+      path: '/npkalert',
+      name: 'npkalert',
+      component: Npkalert
     }
   ]
 })
