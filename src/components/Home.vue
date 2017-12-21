@@ -24,9 +24,9 @@
 </template>
 
 <script>
-//import Npkalert from '@/components/Npkalert.vue'
+// import Npkalert from '@/components/Npkalert.vue'
 export default {
-  name: 'home',
+  name: 'home'
   // components: {
   //   Npkalert: Npkalert
   // },

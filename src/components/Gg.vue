@@ -73,10 +73,12 @@
 </div>
 <br>
   </div>
+  <button type="button" name="button" @click="sendstatus(1)">55555</button>
       </div>
     </div>
     </div>
       </div>
+
       <!-- <div class="col-3">.col-4<br>
         <canvas id="myChart" width="100" height="50vh"></canvas>
       </div> -->
@@ -142,6 +144,11 @@ export default {
       console.log(this.useData[0])
       // this.chart()
     })
+  },
+  methods: {
+    sendstatus (status) {
+      this.$firebaseRefs.dataSensors.child('Amountwater').set(status)
+    }
   }
 }
 </script>
