@@ -1,40 +1,50 @@
 <template>
-  <!-- <router-link to="show">
-    <button type="button" class="btn btn-primary col-xl">Primary</button>
-  </router-link>
-  <router-link to="gg">
-    <button type="button" class="btn btn-primary col-xl">Primary</button>
-  </router-link>
-  <router-link to="npkalert">
-    <button type="button" class="btn btn-primary col-xl">Primary</button>
-  </router-link>
-  <router-link to="gg0">
-    <button type="button" class="btn btn-primary col-xl">Primary</button>
-  </router-link>
-  <router-link to="home">
-    <button type="button" class="btn btn-primary col-xl">Primary</button>
-  </router-link>
-  <div class="" v-if="npk < 30">
-    <div class="container">
-      gvghvjhcvugcytu
-   <npkalert></npkalert>
- </div>
- </div>
-   <router-view></router-view> -->
+  <div class="home">
+    <table class="table table-warning">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Fertility</th>
+      <th>Soil</th>
+      <th>Humidity</th>
+      <th>Temperature</th>
+      <th>Amountwater</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr v-for="(history, key) in dataSensors">
+        <td>{{history.Date}}</td>
+        <td>{{history.Time}}</td>
+        <td>{{history.Fertility}}</td>
+        <td>{{history.Soil}}</td>
+        <td>{{history.Humidity}}</td>
+        <td>{{history.Temperature}}</td>
+        <td>{{history.Amountwater}}</td>
+      </tr>
+  </tbody>
+</table>
+</div>
 </template>
 
 <script>
-// import Npkalert from '@/components/Npkalert.vue'
+import { db } from './firebase.js'
 export default {
-  name: 'home'
-  // components: {
-  //   Npkalert: Npkalert
-  // },
-  // data () {
-  //   return {
-  //     npk: 50
-  //   }
-  // }
+  name: 'home',
+  data () {
+    return {
+      dataSensors: ''
+    }
+  },
+  mounted: function () {
+    var vm = this
+    vm.$bindAsObject('dataSensors', db.ref('DataSensors').child('History'), null)
+  },
+  watch: {
+    dataSensors () {
+      delete this.dataSensors['.key']
+    }
+  }
 }
 </script>
 
