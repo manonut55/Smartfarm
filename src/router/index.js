@@ -20,7 +20,7 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/gg',
+      path: '/',
       name: 'gg',
       component: gg
     },

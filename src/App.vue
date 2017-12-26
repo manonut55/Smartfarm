@@ -23,7 +23,7 @@
         <router-link to="show">
           <a class="nav-link active" >Grape</a>
         </router-link>
-        <router-link to="gg">
+        <router-link to="/">
           <a class="nav-link active" >ShowData</a>
         </router-link>
         <router-link to="home">
