@@ -39,6 +39,7 @@ export default {
   },
   mounted: function () {
     var vm = this
+    // vm.$bindAsObject('dataSensors', db.ref('DataSensors').child('History').limitToLast(2), null)
     vm.$bindAsObject('dataSensors', db.ref('DataSensors').child('History'), null)
   },
   watch: {

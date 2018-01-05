@@ -5,20 +5,16 @@
     <div class="row justify-content-start">
       <div class="col-6">
         <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black;">
+          <h2>NPK</h2>
+          <fertility-graph></fertility-graph>
           <div class="card-block">
-            <fertility-graph></fertility-graph>
             </div>
           </div>
         </div>
       <div class="col-6">
-        <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black; ">
-          <div class="card-block">
             <humidity-graph></humidity-graph>
-            jj
               <br>
             </div>
-          </div>
-        </div>
       </div>
     <br><br>
     <div class="row justify-content-start">
@@ -149,13 +145,9 @@ export default {
 <style lang="css">
 
 .card{
-  background-color: #e2fc94;
+  background-color: #fff;
 
 }
 
-/*h2{
-  background-color: #A1C734;
-  width: 30rem;
-}*/
 
 </style>

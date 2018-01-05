@@ -1,7 +1,7 @@
 <template>
   <div class="fertilityGraph">
-<div class="container">
-<canvas id="myDoughnutChart" width="30" height="30"></canvas>
+  <div class="container">
+<canvas id="myDoughnutChart" width="10px" height="10px"></canvas>
 </div>
 </div>
 </template>
