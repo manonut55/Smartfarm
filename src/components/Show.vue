@@ -8,30 +8,24 @@
       </div>
         </div>
           <div class="row">
-            <div class="col-md-12">
-              <div id="show">
-              <gg></gg>
-      </div>
-     </div>
-      </div>
-      <div class="row">
         <div class="col-md-12">
           <div id="show">
         <graph></graph>
       </div>
       </div>
       </div>
+
 </div>
 </template>
 <script>
 // import Chart from 'Chart.js'
 import showGraph from './ShowGraph'
 import graph from './Graph'
-import gg from './gg'
+import fertilityGraph from './FertilityGraph'
 export default {
   components: {
     showGraph,
-    gg,
+    fertilityGraph,
     graph
   },
   name: 'show',

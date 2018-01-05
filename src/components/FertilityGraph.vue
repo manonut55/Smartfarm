@@ -1,9 +1,7 @@
 <template>
-  <div class="gg">
+  <div class="fertilityGraph">
 <div class="container">
-<canvas id="oilChart" width="600" height="400">
-rgrtguinfuigergu
-</canvas>
+<canvas id="myDoughnutChart" width="30" height="30"></canvas>
 </div>
 </div>
 </template>
@@ -11,30 +9,28 @@ rgrtguinfuigergu
 import Chart from 'Chart.js'
 import { db } from './firebase.js'
 export default {
-  name: 'gg',
+  name: 'fertilityGraph',
   methods: {
     chart () {
-      var oilCanvas = document.getElementById('oilChart')
+      var oilCanvas = document.getElementById('myDoughnutChart')
       Chart.defaults.global.defaultFontFamily = 'Lato'
       Chart.defaults.global.defaultFontSize = 18
-      var oilChart = new Chart(oilCanvas, {
-        type: 'pie',
+      var myDoughnutChart = new Chart(oilCanvas, {
+        type: 'doughnut',
         data: {
-          labels: ['Saudi Arabia', 'Russia', 'Iraq', 'United Arab Emirates', 'Canada'],
+          labels: ['Saudi Arabia'],
           datasets: [{
-            data: [133.3, 86.2, 52.2, 51.2, 50.2],
+            data: [50, 50],
             backgroundColor: [
               '#FF6384',
-              '#63FF84',
-              '#84FF63',
-              '#8463FF',
-              '#6384FF'
+              'white'
             ]
           }]
         },
         options: {
         }
       })
+      console.log(myDoughnutChart)
     }
   },
   data () {

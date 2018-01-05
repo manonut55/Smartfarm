@@ -1,45 +1,25 @@
 <template>
-  <div class="gg">
+  <div class="progressdata">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <div class="container-fluid">
     <div class="row justify-content-start">
       <div class="col-6">
-
         <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black;">
           <div class="card-block">
-
-<h2>Fertility</h2> </tr>
-   <p>Fertility :{{useData[1]}}% </p>
-   <div class="progress">
-  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
-  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" :style="'width:'+useData[1]+'%'">
-  {{useData[1]}}%
-  </div>
-</div>
-<br>
-
-  </div>
-  </div>
-
-      </div>
-
-
+            <fertility-graph></fertility-graph>
+            </div>
+          </div>
+        </div>
       <div class="col-6">
         <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black; ">
           <div class="card-block">
-   <h2>Humidity </h2>
-   <p>Humidity :{{useData[3]}}% </p>
-   <div class="progress">
-  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
-  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" :style="'width:'+useData[3]+'%'">
-  {{useData[3]}}%
-  </div>
-</div>
-<br>
-  </div>
-  </div>
+            <humidity-graph></humidity-graph>
+            jj
+              <br>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     <br><br>
     <div class="row justify-content-start">
       <div class="col-6">
@@ -99,9 +79,15 @@
 </template>
 <script>
 // import Chart from 'Chart.js'
+import fertilityGraph from './FertilityGraph'
+import humidityGraph from './HumidityGraph'
 import { db } from './firebase.js'
 export default {
-  name: 'gg',
+  name: 'progressdata',
+  components: {
+    fertilityGraph,
+    humidityGraph
+  },
   data () {
     return {
       dataSensors: '',

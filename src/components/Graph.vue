@@ -3,7 +3,7 @@
     <div class="row justify-content-start">
       <div class="col-6">
     <div class="container">
-    <canvas id="myLineChart" width="500" height="500"></canvas>
+    <canvas id="myLineChart2" width="500" height="500"></canvas>
   </div>
   </div>
   </div>
@@ -22,8 +22,8 @@ export default {
   props: ['number1', 'number2'],
   methods: {
     chart () {
-      var ctx = document.getElementById('myLineChart').getContext('2d')
-      var myLineChart = new Chart(ctx, {
+      var ctx2 = document.getElementById('myLineChart2').getContext('2d')
+      var myLineChart2 = new Chart(ctx2, {
         type: 'line',
         data: {
           labels: [10, 20, 30],
@@ -47,7 +47,7 @@ export default {
           }
         }
       })
-      console.log(myLineChart)
+      console.log(myLineChart2)
     }
   },
   mounted: function () {

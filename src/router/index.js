@@ -20,7 +20,7 @@ export default new Router({
       component: Graph
     },
     {
-      path: '/progressdata',
+      path: '/',
       name: 'progressdata',
       component: progressdata
     },
