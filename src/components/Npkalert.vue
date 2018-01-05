@@ -33,17 +33,17 @@ export default {
       this.$firebaseRefs.dataSensors.child('buttonstate').set(status)
     },
     check () {
-      return this.useData[1] < 30 && this.useData[7] == 0
+      return this.useData[1] < 20 && this.useData[7] === 0
     }
-},
-watch: {
-  dataSensors () {
-    delete this.dataSensors['.key']
-    this.useData = []
-    this.useData = Object.values(this.dataSensors)
-    check()
+  },
+  watch: {
+    dataSensors () {
+      delete this.dataSensors['.key']
+      this.useData = []
+      this.useData = Object.values(this.dataSensors)
+      this.check()
+    }
   }
-}
 }
 </script>
 <style lang="css">

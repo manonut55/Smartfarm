@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="tabledata">
     <table class="table table-warning">
   <thead class="thead-inverse">
     <tr>
@@ -29,8 +29,9 @@
 
 <script>
 import { db } from './firebase.js'
+
 export default {
-  name: 'home',
+  name: 'tabledata',
   data () {
     return {
       dataSensors: ''

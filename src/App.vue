@@ -1,44 +1,50 @@
 <template>
   <div id="app">
-         <!-- <img src="src="\pic\picheard.jpg"" class="img-fluid" alt="Responsive image" > -->
-        <img src="\pic\picheard.jpg" class="img-fluid" alt="Responsive image" width= 100% height=150 >
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color: #e3f2fd;">
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="/">SmartFarm</a>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link " href="/">Home <span class="sr-only">(current)</span></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <br>
-  <div class="row">
-    <div class="col-2" style="background-color: #e3f2fd;">
-      <nav class="nav flex-column"  style="background-color: rgb(227, 242, 253);width: 200px; border-radius: 5px;">
+         <img src ="https://firebasestorage.googleapis.com/v0/b/smart-farm-78d34.appspot.com/o/picheard.jpg?alt=media&token=04212ba4-041b-471b-9ce4-91ca2b423df0" class="img-fluid" alt="Responsive image">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded" style="background-color: #222222;">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <h2 class="navbar-brand" href="#">Smartfarm</h2>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <router-link to="/">
+      <li>
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </router-link>
+    <router-link to="tabledata">
+      <li>
+        <a class="nav-link" href="#">ตารางข้อมูล</a>
+      </li>
+    </router-link>
+    <router-link to="graph">
+      <li class="nav-item">
+        <a class="nav-link" href="#">กราฟเปรียบเทียบ</a>
+      </li>
+    </router-link>
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          กราฟแสดงข้อมูล
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <router-link to="show">
+          <a class="dropdown-item" href="#">การฟความชื้นในดิน</a>
+        </router-link>
         <router-link to="show">
-          <a class="nav-link active" >Grape</a>
+          <a class="dropdown-item" href="#">กราฟค่า NPK</a>
         </router-link>
-        <router-link to="/">
-          <a class="nav-link active" >ShowData</a>
-        </router-link>
-        <router-link to="home">
-          <a class="nav-link active" >Table</a>
-        </router-link>
-        <router-link to="gg">
-          <a class="nav-link active" >Active</a>
-        </router-link>
-        </nav>
-        <div class="container">
-          <npkalert></npkalert>
         </div>
-    </div>
-    <div class="col-8" style="border:2 ;">
+      </li>
+    </ul>
+  </div>
+      </nav>
+  <div class="row" style="background-color:  #17484C;">
+        <div class="container" style="background-color: #17484C">
+            <br><br>
+          <npkalert></npkalert>
       <router-view></router-view>
+      <br><br><br><br>
     </div>
   </div>
 </div>
@@ -48,19 +54,37 @@ import Npkalert from '@/components/Npkalert.vue'
 export default {
   name: 'app',
   components: {
-     Npkalert: Npkalert
-   }
+    Npkalert
+  }
 }
 </script>
 <style>
-#app {
+
+/*#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #17484C;
 }
 * {
   padding: 0px;
   margin: 0px;
+}*/
+
+
+.navbar-toggleable-md .navbar-nav>li>a:hover,
+.navbar-toggleable-md .navbar-nav>li>a:focus {
+    color: #ffffff;
+    background-color: #17484C;
 }
+.navbar-toggleable-md .navbar-nav>.active>a,
+.navbar-toggleable-md .navbar-nav>.active>a:hover,
+.navbar-toggleable-md .navbar-nav>.active>a:focus {
+    color: #ffffff;
+    background-color: #17484C !important;
+    display:block;
+}
+
+
+
 </style>

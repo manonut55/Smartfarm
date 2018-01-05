@@ -1,28 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import gg from '@/components/gg'
+import Graph from '@/components/Graph'
+import progressdata from '@/components/progressdata'
 import Show from '@/components/Show'
-import Home from '@/components/Home'
+import tabledata from '@/components/tabledata'
 import Npkalert from '@/components/Npkalert'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/home',
-      name: 'home',
-      component: Home
+      path: '/tabledata',
+      name: 'tabledata',
+      component: tabledata
     },
     {
-      path: '/helloWorld',
-      name: 'helloWorld',
-      component: HelloWorld
+      path: '/graph',
+      name: 'graph',
+      component: Graph
     },
     {
-      path: '/',
-      name: 'gg',
-      component: gg
+      path: '/progressdata',
+      name: 'progressdata',
+      component: progressdata
     },
     {
       path: '/show',
