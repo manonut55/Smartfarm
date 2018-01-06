@@ -1,8 +1,8 @@
 <template>
-  <div class="progressdata">
+    <div class="container-fluid">
+      <div class="progressdata">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <div class="container-fluid">
-    <div class="row justify-content-start">
+            <div class="row justify-content-start">
       <div class="col-6">
           <fertility-graph></fertility-graph>
           </div>
@@ -14,70 +14,48 @@
     <br><br>
     <div class="row justify-content-start">
       <div class="col-6">
-        <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black; ">
-          <div class="card-block">
-   <h2>Temperature </h2>
-   <p>Temperature :{{useData[5]}}% </p>
-   <div class="progress">
-  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
-  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" :style="'width:'+useData[5]+'%'">
-  {{useData[5]}}%
-  </div>
-</div>
-<br>
-  </div>
-  </div>
-      </div>
-    <br><br><br>
+          <temperature-chart></temperature-chart>
+          </div>
       <div class="col-6">
-        <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black; ">
-          <div class="card-block">
-   <h2>Soil Progress Bars</h2>
-   <p>Soil:1 :{{useData[4]}}%</p>
-   <div class="progress">
-  <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
-  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" :style="'width:'+useData[4]+'%'">
-  {{useData[4]}}%
-  <br>
-  </div>
-</div>
-<br>
-  </div>
-  </div>
+            <soil-chart></soil-chart>
+              <br>
+            </div>
       </div>
-    </div>
     <br><br>
     <div class="row justify-content-start">
       <div class="col-6">
         <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black;">
           <div class="card-block">
    <h2>Amountwater </h2>
-     <h2> Round {{useData[0]}}</h2>
+     <h2> Round {{useData[5]}}</h2>
 </div>
 <br>
   </div>
   </div>
       </div>
-    </div>
+
   </div>
 
       <!-- <div class="col-3">.col-4<br>
         <canvas id="myChart" width="100" height="50vh"></canvas>
       </div> -->
-        </div>
-    </div>
+        <!-- </div>
+    </div>-->
     </div>
 </template>
 <script>
-// import Chart from 'Chart.js'
+import temperatureChart from './TemperatureChart'
 import fertilityGraph from './FertilityGraph'
 import humidityGraph from './HumidityGraph'
+import soilChart from './SoilChart'
 import { db } from './firebase.js'
 export default {
   name: 'progressdata',
   components: {
     fertilityGraph,
-    humidityGraph
+    humidityGraph,
+    temperatureChart,
+    soilChart
   },
   data () {
     return {
