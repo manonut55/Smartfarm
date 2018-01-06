@@ -4,13 +4,8 @@
         <div class="container-fluid">
     <div class="row justify-content-start">
       <div class="col-6">
-        <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black;">
-          <h2>NPK</h2>
           <fertility-graph></fertility-graph>
-          <div class="card-block">
-            </div>
           </div>
-        </div>
       <div class="col-6">
             <humidity-graph></humidity-graph>
               <br>

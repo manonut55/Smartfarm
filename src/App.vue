@@ -39,8 +39,8 @@
     </ul>
   </div>
       </nav>
-  <div class="row" style="background-color:  #17484C;">
-        <div class="container" style="background-color: #17484C">
+  <div class="row" style="background-color:  #fcfaba;">
+        <div class="container" style="background-color: #fcfaba;">
             <br><br>
           <npkalert></npkalert>
       <router-view></router-view>
