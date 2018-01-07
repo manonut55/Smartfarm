@@ -28,10 +28,13 @@
               <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">กราฟแสดงข้อมูล</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <router-link to="show">
-                  <a class="dropdown-item" href="#">การฟความชื้นในดิน</a>
+                  <a class="dropdown-item" href="#">ความชื้นในดิน</a>
                 </router-link>
                 <router-link to="humidityGraph">
                   <a class="dropdown-item" href="#">ความชื้นในอากาศ</a>
+                </router-link>
+                <router-link to="show">
+                  <a class="dropdown-item" href="#">กราฟค่า NPK</a>
                 </router-link>
                 <router-link to="show">
                   <a class="dropdown-item" href="#">กราฟค่า NPK</a>

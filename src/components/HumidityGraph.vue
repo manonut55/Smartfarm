@@ -15,14 +15,14 @@
       <tr>
         <th>Date </th>
         <th>Time</th>
-        <th>Humidity{{a}}</th>
+        <th>Humidity</th>
       </tr>
     </thead>
     <tbody>
         <tr v-for="(history, key, index) in dataSensors">
           <td>{{history.Date}}</td>
           <td>{{history.Time}}</td>
-          <td>{{a[index] = history.Humidity}} </td>
+          <td>{{history.Humidity}} </td>
         </tr>
     </tbody>
   </table>
@@ -39,8 +39,9 @@ export default {
     return {
       dataSensors: '',
       useData: '',
-      a: [],
-      dateTime: []
+      humiData: [],
+      timeData: [],
+      dateData: []
     }
   },
   // props: ['number1', 'number2'],
@@ -50,10 +51,10 @@ export default {
       var myLineChart2 = new Chart(ctx2, {
         type: 'line',
         data: {
-          labels: this.dateTime,
+          labels: this.dateData,
           datasets: [{
             label: 'กราฟแสดงข้อมูล',
-            data: this.a,
+            data: this.humiData,
             backgroundColor: [
               'rgba(217, 237, 247, 0.4)'
             ],
@@ -76,16 +77,18 @@ export default {
   },
   mounted: function () {
     var vm = this
-    vm.$bindAsObject('dataSensors', db.ref('DataSensors/History').limitToLast(5), null)
+    vm.$bindAsObject('dataSensors', db.ref('DataSensors/History').limitToLast(7), null)
   },
   watch: {
     dataSensors () {
       let newdata = []
       delete this.dataSensors['.key']
       newdata = Object.values(this.dataSensors)
-      for(let index in newdata) {
-        this.a[index] = newdata[index].Humidity
-        this.dateTime[index] = newdata[index].Date
+      console.log(this.dateData)
+      for (let index in newdata) {
+        this.humiData[index] = newdata[index].Humidity
+        this.timeData[index] = newdata[index].Time
+        this.dateData[index] = newdata[index].Date
       }
       this.chart()
     }
