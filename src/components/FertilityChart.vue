@@ -49,7 +49,7 @@ export default {
           }]
         },
         options: {
-           events: ['onHover']
+          events: ['onHover']
         }
       })
       console.log(fertilityChart)

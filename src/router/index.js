@@ -6,7 +6,6 @@ import Show from '@/components/Show'
 import tabledata from '@/components/tabledata'
 import Npkalert from '@/components/Npkalert'
 Vue.use(Router)
-
 export default new Router({
   routes: [
     {

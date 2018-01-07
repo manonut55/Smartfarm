@@ -13,16 +13,16 @@
       <table class="table table-info">
     <thead>
       <tr>
-        <th>Date</th>
+        <th>Date </th>
         <th>Time</th>
-        <th>Fertility</th>
+        <th>Humidity{{a}}</th>
       </tr>
     </thead>
     <tbody>
-        <tr v-for="(history, key) in dataSensors">
+        <tr v-for="(history, key, index) in dataSensors">
           <td>{{history.Date}}</td>
           <td>{{history.Time}}</td>
-          <td>{{history.Fertility}}</td>
+          <td>{{a[index] = history.Humidity}} </td>
         </tr>
     </tbody>
   </table>
@@ -37,7 +37,10 @@ export default {
   name: 'humidityGraph',
   data () {
     return {
-      dataSensors: ''
+      dataSensors: '',
+      useData: '',
+      a: [],
+      dateTime: []
     }
   },
   // props: ['number1', 'number2'],
@@ -47,10 +50,10 @@ export default {
       var myLineChart2 = new Chart(ctx2, {
         type: 'line',
         data: {
-          labels: [30, 20, 30, 10, 20, 30],
+          labels: this.dateTime,
           datasets: [{
             label: 'กราฟแสดงข้อมูล',
-            data: [20, 20, 30, 10, 20, 30],
+            data: this.a,
             backgroundColor: [
               'rgba(217, 237, 247, 0.4)'
             ],
@@ -73,12 +76,17 @@ export default {
   },
   mounted: function () {
     var vm = this
-    // vm.$bindAsObject('dataSensors', db.ref('DataSensors').child('History').limitToLast(2), null)
-    vm.$bindAsObject('dataSensors', db.ref('DataSensors').child('History'), null)
+    vm.$bindAsObject('dataSensors', db.ref('DataSensors/History').limitToLast(5), null)
   },
   watch: {
     dataSensors () {
+      let newdata = []
       delete this.dataSensors['.key']
+      newdata = Object.values(this.dataSensors)
+      for(let index in newdata) {
+        this.a[index] = newdata[index].Humidity
+        this.dateTime[index] = newdata[index].Date
+      }
       this.chart()
     }
   }
