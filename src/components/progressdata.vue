@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <div class="row justify-content-start">
       <div class="col-6">
-          <fertility-graph></fertility-graph>
+          <fertility-chart></fertility-chart>
           </div>
       <div class="col-6">
-            <humidity-graph></humidity-graph>
+            <humidity-chart></humidity-chart>
               <br>
             </div>
       </div>
@@ -27,7 +27,7 @@
         <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black;">
           <div class="card-block">
    <h2>Amountwater </h2>
-     <h2> Round {{useData[5]}}</h2>
+     <h2> Round {{useData[0]}}</h2>
 </div>
 <br>
   </div>
@@ -45,15 +45,15 @@
 </template>
 <script>
 import temperatureChart from './TemperatureChart'
-import fertilityGraph from './FertilityGraph'
-import humidityGraph from './HumidityGraph'
+import fertilityChart from './FertilityChart'
+import humidityChart from './HumidityChart'
 import soilChart from './SoilChart'
 import { db } from './firebase.js'
 export default {
   name: 'progressdata',
   components: {
-    fertilityGraph,
-    humidityGraph,
+    fertilityChart,
+    humidityChart,
     temperatureChart,
     soilChart
   },

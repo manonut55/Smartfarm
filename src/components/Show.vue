@@ -3,14 +3,15 @@
       <div class="row">
         <div class="col-md-12">
           <div id="show">
-      <show-graph :number2="number" :number1="number2"></show-graph>
+      <!-- <show-graph :number2="number" :number1="number2"></show-graph> -->
+      <show-graph ></show-graph>
       </div>
       </div>
         </div>
           <div class="row">
         <div class="col-md-12">
           <div id="show">
-        <graph></graph>
+            <humidity-graph ></humidity-graph>
       </div>
       </div>
       </div>
@@ -20,13 +21,11 @@
 <script>
 // import Chart from 'Chart.js'
 import showGraph from './ShowGraph'
-import graph from './Graph'
-import fertilityGraph from './FertilityGraph'
+import humidityGraph from './HumidityGraph'
 export default {
   components: {
     showGraph,
-    fertilityGraph,
-    graph
+    humidityGraph
   },
   name: 'show',
   data () {

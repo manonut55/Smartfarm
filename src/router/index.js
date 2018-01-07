@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Graph from '@/components/Graph'
+import HumidityGraph from '@/components/HumidityGraph'
 import progressdata from '@/components/progressdata'
 import Show from '@/components/Show'
 import tabledata from '@/components/tabledata'
@@ -15,9 +15,9 @@ export default new Router({
       component: tabledata
     },
     {
-      path: '/graph',
-      name: 'graph',
-      component: Graph
+      path: '/humidityGraph',
+      name: 'humidityGraph',
+      component: HumidityGraph
     },
     {
       path: '/',

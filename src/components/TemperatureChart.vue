@@ -1,4 +1,3 @@
-temperatureChart
 <template>
   <div class="temperatureChart">
     <div class="container">
@@ -10,7 +9,7 @@ temperatureChart
           <canvas id="temperatureChart" style="width:25px; position :relative; left:30%;"></canvas>
           <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}%</h1>
           <br>
-          <h5 style=" position : absolute ;top:60%; left:3%;"> ความชื้นที่มีอยู่ในอากาศ</h5>
+          <h5 style=" position : absolute ;top:60%; left:10%;">องศาเซลเซียส</h5>
       <button type="button" class="btn btn-danger" @click="sendstatus(1)"  style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button>
       <div id="circletemperature" class="container-fluid">{{useData[0]}}%</div>
     </div>
@@ -31,19 +30,20 @@ export default {
       var temperatureChart = new Chart(oilCanvast, {
         type: 'doughnut',
         data: {
-          labels: ['Saudi Arabia'],
+          labels: ['อุณหภูมิ'],
           datasets: [{
             data: [this.useData[0], (100 - this.useData[0])],
             backgroundColor: [
-              'blue',
+              '#2b7cff',
               'white'],
             borderColor: [
-              '#75db27',
-              '#75db27']
+              '#2072f7',
+              '#2072f7']
 
           }]
         },
         options: {
+          events: ['onHover']
         }
       })
       console.log(temperatureChart)
@@ -58,7 +58,7 @@ export default {
   mounted: function () {
     var vm = this
     // vm.$bindAsObject('dataSensors', db.ref('DataSensors').child('History'), null)
-    vm.$bindAsObject('dataSensors', db.ref('DataSensors/Humidity'), null)
+    vm.$bindAsObject('dataSensors', db.ref('DataSensors/Temperature'), null)
   },
   watch: {
     dataSensors () {
@@ -73,7 +73,7 @@ export default {
 #circletemperature {
 width: 100px;
 height: 100px;
-background: #4073c4;
+background: blue;
 -moz-border-radius: 60px;
 -webkit-border-radius: 60px;
 border-radius: 60px;

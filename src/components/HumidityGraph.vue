@@ -1,18 +1,31 @@
 <template>
   <div class="humidityGraph">
-    <div class="container">
-      <div class="card" style="width: 30rem; height:20.5rem; box-shadow: 3px 4px 10px black;">
-        <br>
-      <h3 style=" position : absolute ;top:5%; left:5%;">  ค่าความชื้นในอากาศ  </h3>
-        <br>
-            <div class="card-block" >
-          <canvas id="myDoughnutChart2" style="width:25px; position :relative; left:30%;"></canvas>
-          <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}%</h1>
+    <div class="row justify-content-start">
+      <div class="col-md-6">
+        <div class="card" style="width: 35rem; height:30.5rem; box-shadow: 3px 4px 10px black; position :relative; right :5%;">
           <br>
-          <h5 style=" position : absolute ;top:60%; left:3%;">  สารอาหารที่มีอยู่ในดิน</h5>
-      <button type="button" class="btn btn-danger" @click="sendstatus(1)"  style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button>
-      <div class="container-fluid" id="circlehumidity">{{useData[0]}}%</div>
-    </div>
+    <div class="container"  style="width: 35rem; height:30.5rem;">
+    <canvas id="myLineChart2" style="width:520px; height : 450px; position :absolute;top:2px; left:1%;"></canvas>
+  </div>
+</div>
+  </div>
+      <div class="col-md-6">
+      <table class="table table-info">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Fertility</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr v-for="(history, key) in dataSensors">
+          <td>{{history.Date}}</td>
+          <td>{{history.Time}}</td>
+          <td>{{history.Fertility}}</td>
+        </tr>
+    </tbody>
+  </table>
   </div>
 </div>
 </div>
@@ -24,71 +37,69 @@ export default {
   name: 'humidityGraph',
   data () {
     return {
-      dataSensors: '',
-      useData: ''
+      dataSensors: ''
     }
   },
+  // props: ['number1', 'number2'],
   methods: {
     chart () {
-      var oilCanvas2 = document.getElementById('myDoughnutChart2')
-      // Chart.defaults.global.defaultFontFamily = 'Lato'
-      // Chart.defaults.global.defaultFontSize = 18
-      var myDoughnutChart2 = new Chart(oilCanvas2, {
-        type: 'doughnut',
+      var ctx2 = document.getElementById('myLineChart2').getContext('2d')
+      var myLineChart2 = new Chart(ctx2, {
+        type: 'line',
         data: {
-          labels: ['Saudi Arabia'],
+          labels: [30, 20, 30, 10, 20, 30],
           datasets: [{
-            data: [this.useData[0], (100 - this.useData[0])],
+            label: 'กราฟแสดงข้อมูล',
+            data: [20, 20, 30, 10, 20, 30],
             backgroundColor: [
-              '#894f18',
-              'white'],
+              'rgba(217, 237, 247, 0.4)'
+            ],
             borderColor: [
-              '#723f0e',
-              '#723f0e']
+              'rgba(38,144,255,1)'
+            ],
+            borderWidth: 1
           }]
         },
         options: {
+          scales: {
+            yAxes: [{
+              stacked: true
+            }]
+          }
         }
       })
-      console.log(myDoughnutChart2)
+      console.log(myLineChart2)
     }
   },
   mounted: function () {
     var vm = this
-    // vm.$bindAsObject('dataSensors', db.ref('DataSensors').child('History'), null)
-    vm.$bindAsObject('dataSensors', db.ref('DataSensors/Humidity'), null)
+    // vm.$bindAsObject('dataSensors', db.ref('DataSensors').child('History').limitToLast(2), null)
+    vm.$bindAsObject('dataSensors', db.ref('DataSensors').child('History'), null)
   },
   watch: {
     dataSensors () {
       delete this.dataSensors['.key']
-      this.useData = Object.values(this.dataSensors)
       this.chart()
     }
   }
 }
 </script>
+
 <style lang="css">
-#circlehumidity {
-width: 100px;
-height: 100px;
-background: #FFCA2B;
--moz-border-radius: 60px;
--webkit-border-radius: 60px;
-border-radius: 60px;
-font-size: 28px;
-color: #000;
- line-height: 100px;
-text-align: center;
-position: absolute;
-top: 44%;
-left:67%;
-}
-.card-block{
-  margin-top: 10px;
-   margin-right: 5px;
-   margin-bottom: 5px;
-   margin-left: 5px;
-   padding:10px 10px 10px 10px;
-   border-style: groove;
-}
+table{
+  position: absolute;
+  top:5% ;
+  }
+  thead{
+    background-color: #3956f9;
+    background:-o-linear-gradient(90deg, #1E90FF, #3956f9);
+	background:-moz-linear-gradient( center top, #1E90FF 5%, #3956f9 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1E90FF), color-stop(1, #7ebffe) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1E90FF', endColorstr='#3956f9');
+	color:#FFFFFF
+  }
+  tr:nth-child(even) {background-color: #fff;}
+  .table-info{
+     box-shadow: 3px 4px 10px black;
+  }
 </style>

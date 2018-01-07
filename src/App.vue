@@ -1,6 +1,7 @@
 <template>
   <div id="app">
          <img src ="https://firebasestorage.googleapis.com/v0/b/smart-farm-78d34.appspot.com/o/picheard.jpg?alt=media&token=04212ba4-041b-471b-9ce4-91ca2b423df0" class="img-fluid" alt="Responsive image">
+          <div id="nav">
         <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded" style="background-color: #222222;">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -18,7 +19,7 @@
         <a class="nav-link" href="#">ตารางข้อมูล</a>
       </li>
     </router-link>
-    <router-link to="graph">
+    <router-link to="humidityGraph">
       <li class="nav-item">
         <a class="nav-link" href="#">กราฟเปรียบเทียบ</a>
       </li>
@@ -38,7 +39,9 @@
       </li>
     </ul>
   </div>
+
       </nav>
+      </div>
   <div class="row" style="background-color:  #e2e0e0;">
         <div class="container" style="background-color: #e2e0e0;">
             <br><br>
@@ -70,9 +73,7 @@ export default {
   padding: 0px;
   margin: 0px;
 }*/
-
-
-.navbar-toggleable-md .navbar-nav>li>a:hover,
+/* .navbar-toggleable-md .navbar-nav>li>a:hover,
 .navbar-toggleable-md .navbar-nav>li>a:focus {
     color: #ffffff;
     background-color: #17484C;
@@ -83,8 +84,32 @@ export default {
     color: #ffffff;
     background-color: #17484C !important;
     display:block;
+} */
+#nav a:focus {
+  color: #000;
+  background: #A1C734;
+}
+#nav a:link, a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#nav a:hover, a:active {
+    display: block;
+    background-color: #17484C;
+    color: #fff;
+}
+#nav a.selected:link, a.selected:visited{
+    display: block;
+    background-color: #17484C;
+    color: #fff;
 }
 
+#nav a.selected:hover, a.selected:active {
+    display: block;
+    background-color: #17484C;
+    color: #fff;
+}
 
 
 </style>
