@@ -19,7 +19,7 @@
                 <a class="nav-link" href="#">ตารางข้อมูล</a>
               </li>
             </router-link>
-            <router-link to="humidityGraph">
+            <router-link to="showGraph">
               <li class="nav-item">
                 <a class="nav-link" href="#">กราฟเปรียบเทียบ</a>
               </li>
@@ -27,17 +27,17 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">กราฟแสดงข้อมูล</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <router-link to="show">
+                <router-link to="soilGraph">
                   <a class="dropdown-item" href="#">ความชื้นในดิน</a>
                 </router-link>
                 <router-link to="humidityGraph">
                   <a class="dropdown-item" href="#">ความชื้นในอากาศ</a>
                 </router-link>
-                <router-link to="show">
-                  <a class="dropdown-item" href="#">กราฟค่า NPK</a>
+                <router-link to="temperatureGraph">
+                  <a class="dropdown-item" href="#">อุณหภูมิ</a>
                 </router-link>
-                <router-link to="show">
-                  <a class="dropdown-item" href="#">กราฟค่า NPK</a>
+                <router-link to="fertilityGraph">
+                  <a class="dropdown-item" href="#">ค่า NPK</a>
                 </router-link>
               </div>
             </li>
