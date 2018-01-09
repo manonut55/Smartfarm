@@ -1,15 +1,15 @@
 <template>
   <div class="tabledata">
-    <table class="table table-warning">
+    <table class="table table-warning" style="position: relative; top: 5px;">
   <thead class="thead-inverse">
     <tr>
-      <th>Date</th>
-      <th>Time</th>
-      <th>Fertility</th>
-      <th>Soil</th>
-      <th>Humidity</th>
-      <th>Temperature</th>
-      <th>Amountwater</th>
+      <th>วัน/เดือน/ปี</th>
+      <th>เวลา</th>
+      <th>ค่าNPK</th>
+      <th>ค่าความชื้นในดิน</th>
+      <th>ค่าความชื้นในอากาศ</th>
+      <th>อุณหภูมิ</th>
+      <th>จำนวนครั้งในการให้น้ำ</th>
     </tr>
   </thead>
   <tbody>

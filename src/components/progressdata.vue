@@ -24,10 +24,19 @@
     <br><br>
     <div class="row justify-content-start">
       <div class="col-6">
-        <div class="card" style="width: 30rem; box-shadow: 3px 4px 10px black;">
+        <div class="card" style="width: 30rem; height:19.75rem; box-shadow: 3px 4px 10px black;">
+          <br>
+          <h2 style="position : relative ; top:25;left:5%;">จำนวนครั้งในการให้น้ำ </h2>
           <div class="card-block">
-   <h2>Amountwater </h2>
-     <h2> Round {{useData[0]}}</h2>
+
+               <div class="col-6" style="width:100px; position:absolute; top:35%;left:70%;">
+                 <h2 style="font-size:60px; position : absolute ; top:30%;left:33%;">{{useData[0]}}</h2>
+       <img src ="https://firebasestorage.googleapis.com/v0/b/smart-farm-78d34.appspot.com/o/21690962_1546281905409883_1000476843_n.png?alt=media&token=956f0cb1-01fd-4ee8-8deb-33e7e7f48db7" class="img-fluid" alt="Responsive image">
+      </div>
+        <div class="col-6" style="position : absolute; top:50%;left:5%;">
+         <h2  > ครั้งที่ </h2>
+
+</div>
 </div>
 <br>
   </div>
@@ -122,5 +131,12 @@ export default {
 
 }
 
-
+/* .card-block{
+  margin-top: 10px;
+   margin-right: 5px;
+   margin-bottom: 5px;
+   margin-left: 5px;
+   padding:10px 10px 10px 10px;
+   border-style: groove;
+} */
 </style>

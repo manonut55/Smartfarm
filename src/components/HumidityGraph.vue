@@ -1,6 +1,51 @@
 <template>
   <div class="humidityGraph">
     <div class="row justify-content-start">
+      <div class="col-6">
+        <div class="container">
+          <div class="card" style="width: 73rem; height:20rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; right:8%;">
+            <br>
+          <h3 style=" position : absolute ;top:5%; left:5%;">  กราฟความชื้นในอากาศ  </h3>
+            <br>
+            <canvas id="myLineChart" style="width:800px; height:220px; position :relative; left:0%;"  ></canvas>
+            <div class="container" style="width:150px; position :absolute; top:10%;left:80%;" >
+            <img src ="https://firebasestorage.googleapis.com/v0/b/smart-farm-78d34.appspot.com/o/%E0%B8%9F%E0%B8%9F%E0%B8%9F%E0%B8%9F%E0%B8%9F.png?alt=media&token=4822f28c-82f6-44a5-8767-33162f574d8d" class="img-fluid" alt="Responsive image">
+          </div>
+          <div class="container" style="position :absolute; top:5%;left:55%;">
+            <img src ="https://firebasestorage.googleapis.com/v0/b/smart-farm-78d34.appspot.com/o/ssss.png?alt=media&token=c1fe5347-b9c3-42bf-8a0d-6be7db13a564" class="img-fluid" alt="Responsive image" style="width:300px; position:absolute;top:5%;">
+            </div>
+            <div class="container" style="position :absolute; top:25%;left:6.5%;">
+            <center><h6  style="color: #fff; position :absolute; top:25%;left:55%; font-size:24px;">เกณฑ์การประเมินค่า<br>ที่เหมาะสม<br>สำหรับแปลงปลูก</h6></center>
+          </div>
+  <div class="container" style="position :absolute; top:70%;left:60%;">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">กดเพื่อดูเกณฑ์</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">ค่าที่เหมาะสมสำหรับแปลงปลูก</h4>
+        </div>
+        <div class="modal-body">
+          <p>ใส่ข้อความที่นี่</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">ปิด</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+        <br><br><br>
+    <div class="row justify-content-start">
       <div class="col-md-6">
         <div class="card" style="width: 35rem; height:30.5rem; box-shadow: 3px 4px 10px black; position :relative; right :5%;">
           <br>
@@ -10,12 +55,16 @@
 </div>
   </div>
       <div class="col-md-6">
+        <div class="card" style="width:35rem; height:30.5rem; box-shadow: 3px 4px 10px black; position : relative ; left:3%;">
+      <br>
+    <h3 style=" position : absolute ;top:7%; left:5%;"> ตารางความชื้นในอากาศ  </h3>
+      <br>
       <table class="table table-info">
     <thead>
       <tr>
-        <th>Date </th>
-        <th>Time</th>
-        <th>Humidity</th>
+        <th>วัน/เดือน/ปี</th>
+        <th>เวลา</th>
+        <th>ค่าความชื้นในอากาศ</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +75,7 @@
         </tr>
     </tbody>
   </table>
+  </div>
   </div>
 </div>
 </div>
@@ -99,7 +149,7 @@ export default {
 <style lang="css">
 table{
   position: absolute;
-  top:5% ;
+  top:20% ;
   }
   thead{
     background-color: #3956f9;

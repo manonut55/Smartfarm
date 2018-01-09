@@ -7,13 +7,15 @@
         <br>
             <div class="card-block" >
           <canvas id="temperatureChart" style="width:25px; position :relative; left:30%;"></canvas>
-          <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}%</h1>
+          <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}</h1>
           <br>
-          <h5 style=" position : absolute ;top:60%; left:10%;">องศาเซลเซียส</h5>
+          <h3 style=" position : absolute ;top:38%; left:40%; font-size : 40px"> C</h3>
+          <h7 style=" position : absolute ;top:36%; left:46%; "> o </h7>
+          <h5 style=" position : absolute ;top:60%; left:10%;">ค่าอุณหภูมิปัจจุบัน</h5>
           <router-link to="temperatureGraph">
       <button type="button" class="btn btn-danger" @click="sendstatus(1)"  style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button>
 </router-link>
-      <div id="circletemperature" class="container-fluid">{{useData[0]}}%</div>
+      <div id="circletemperature" class="container-fluid">{{useData[0]}}</div>
     </div>
   </div>
 </div>

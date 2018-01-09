@@ -7,13 +7,13 @@
         <br>
             <div class="card-block" >
           <canvas id="myDoughnutChart2" style="width:25px; position :relative; left:30%;"></canvas>
-          <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}%</h1>
+          <h1  style=" position : absolute ;top:30%; left:10%; font-size : 70px">{{useData[0]}}%</h1>
           <br>
-          <h5 style=" position : absolute ;top:60%; left:4.5%;">  สารอาหารที่มีอยู่ในดิน</h5>
+          <h5 style=" position : absolute ;top:60%; left:4.5%;">  ความชื้นในอากาศ</h5>
           <router-link to="humidityGraph">
       <button type="button" class="btn btn-danger" @click="sendstatus(1)"  style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button>
     </router-link>
-      <div class="container-fluid" id="circlehumidity">{{useData[0]}}%</div>
+      <div class="container-fluid" id="circlehumidity">{{useData[0]}}</div>
     </div>
   </div>
 </div>

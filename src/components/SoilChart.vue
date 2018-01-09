@@ -9,11 +9,11 @@
           <canvas id="soilChart" style="width:25px; position :relative; left:30%;"></canvas>
           <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}%</h1>
           <br>
-          <h5 style=" position : absolute ;top:60%; left:3%;"> ความชื้นที่มีอยู่ในอากาศ</h5>
+          <h5 style=" position : absolute ;top:60%; left:3%;"> ความชื้นในดิน</h5>
           <router-link to="soilGraph">
       <button type="button" class="btn btn-danger" @click="sendstatus(1)"  style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button>
     </router-link>
-      <div id="circlesoil" class="container-fluid">{{useData[0]}}%</div>
+      <div id="circlesoil" class="container-fluid">{{useData[0]}}</div>
     </div>
   </div>
 </div>
