@@ -7,6 +7,7 @@
             <br>
           <h3 style=" position : absolute ;top:5%; left:5%;">  ค่าNPK  </h3>
             <br>
+            <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{ferData[6]}}</h1>
             <canvas id="myLineChart" style="width:800px; height:220px; position :relative; left:0%;"  ></canvas>
             <div class="container" style="width:150px; position :absolute; top:10%;left:80%;" >
             <img src ="https://firebasestorage.googleapis.com/v0/b/smart-farm-78d34.appspot.com/o/%E0%B8%9F%E0%B8%9F%E0%B8%9F%E0%B8%9F%E0%B8%9F.png?alt=media&token=4822f28c-82f6-44a5-8767-33162f574d8d" class="img-fluid" alt="Responsive image">

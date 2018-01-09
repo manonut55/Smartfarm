@@ -7,12 +7,13 @@
           <div class="container">
             <div class="card" style="width: 66.5rem; height:36rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; left:2%;">
               <br>
-            <h3 style=" position : absolute ;top:5%; left:5%;">  กราฟแสดงค่า  </h3>
-              <br>
+            <h3 style=" position : absolute ;top:5%; left:5%;">  กราฟการเปรียบเทียบข้อมูล  </h3>
+              <br><br>
                   <!-- <div class="card-block" > -->
             <canvas id="myLineChart" style="width:800px; height:360px; position :relative; left:0%;"  ></canvas>
           <!-- </div> -->
           </div>
+
           </div>
         </div>
       </div>
@@ -21,7 +22,7 @@
         <div class="col-6">
                 <div class="card" style="width:33rem; height:31rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; left:5%;">
               <br>
-            <h3 style=" position : absolute ;top:7%; left:5%;"> ตารางที่ 1  </h3>
+            <h3 style=" position : absolute ;top:7%; left:5%;"> ตารางข้อมูลแปลงที่ปลูกแบบควบคุม  </h3>
               <br>
                   <table class="table table-info" style="left:0%;">
                   <thead>
@@ -46,7 +47,7 @@
         <div class="col-6">
                 <div class="card" style="width: 33rem; height:31rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; left:2%;">
               <br>
-            <h3 style=" position : absolute ;top:7%; left:5%;"> ตารางที่ 2  </h3>
+            <h3 style=" position : absolute ;top:7%; left:5%;"> ตารางข้อมูลแปลงที่ปลูกแบบชาวบ้าน  </h3>
               <br>
                   <table class="table table-info" style="left:0%;">
                   <thead>
@@ -61,8 +62,8 @@
                       <tr v-for="(history, key, index) in dataSensors">
                         <td>{{history.Date}}</td>
                         <td>{{history.Time}}</td>
-                        <td>{{history.Soil}}</td>
-                        <td>{{history.Fertility}}</td>
+                        <td>{{history.Soil_compare}}</td>
+                        <td>{{history.Fertility_compare}}</td>
                       </tr>
                   </tbody>
                 </table>
@@ -85,6 +86,8 @@ export default {
       useData: '',
       soilData: [],
       ferData: [],
+      soilcData: [],
+      fercData: [],
       timeData: [],
       dateData: []
     }
@@ -117,6 +120,28 @@ export default {
               'rgba(25,75,22,1)'
             ],
             borderWidth: 1
+          },
+          {
+            label: '# of Votes2',
+            data: this.fercData,
+            backgroundColor: [
+              'rgba(161, 199, 52, 0.2)'
+            ],
+            borderColor: [
+              'rgba(25,75,22,1)'
+            ],
+            borderWidth: 1
+          },
+          {
+            label: '# of Votes2',
+            data: this.soilcData,
+            backgroundColor: [
+              'rgba(161, 199, 52, 0.2)'
+            ],
+            borderColor: [
+              'rgba(25,75,22,1)'
+            ],
+            borderWidth: 1
           }]
         },
         options: {
@@ -142,7 +167,9 @@ export default {
       console.log(this.dateData)
       for (let index in newdata) {
         this.ferData[index] = newdata[index].Fertility
-        this.soilData[index] = newdata[index].Soil
+        this.soilData[index] = newdata[index].Soilc
+        this.fercData[index] = newdata[index].Fertility_compare
+        this.soilcData[index] = newdata[index].Soil_compare
         this.timeData[index] = newdata[index].Time
         this.dateData[index] = newdata[index].Date
       }

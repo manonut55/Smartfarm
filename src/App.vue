@@ -11,7 +11,7 @@
           <ul class="navbar-nav">
             <router-link to="/">
               <li>
-                
+
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
             </router-link>
@@ -22,7 +22,7 @@
             </router-link>
             <router-link to="showGraph">
               <li class="nav-item">
-                <a class="nav-link" href="#">กราฟเปรียบเทียบ</a>
+                <a class="nav-link" href="#">กราฟการเปรียบเทียบข้อมูล</a>
               </li>
             </router-link>
             <li class="nav-item dropdown">
