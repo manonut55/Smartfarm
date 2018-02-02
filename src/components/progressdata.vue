@@ -24,7 +24,7 @@
     <br><br>
     <div class="row justify-content-start">
       <div class="col-6">
-        <div class="card" style="width: 30rem; height:19.75rem; box-shadow: 3px 4px 10px black;">
+        <div class="card" style="width: 30rem; height:19.75rem;left:18%; box-shadow: 3px 4px 10px black;">
           <br>
           <h2 style="position : relative ; top:25;left:5%;">จำนวนครั้งในการให้น้ำ </h2>
           <div class="card-block">
@@ -41,15 +41,12 @@
 <br>
   </div>
   </div>
+  <div class="col-6">
+        <ph-Chart></ph-Chart>
+          <br>
+        </div>
       </div>
-
   </div>
-
-      <!-- <div class="col-3">.col-4<br>
-        <canvas id="myChart" width="100" height="50vh"></canvas>
-      </div> -->
-        <!-- </div>
-    </div>-->
     </div>
 </template>
 <script>
@@ -57,6 +54,7 @@ import temperatureChart from './TemperatureChart'
 import fertilityChart from './FertilityChart'
 import humidityChart from './HumidityChart'
 import soilChart from './SoilChart'
+import phChart from './phChart'
 import { db } from './firebase.js'
 export default {
   name: 'progressdata',
@@ -64,7 +62,8 @@ export default {
     fertilityChart,
     humidityChart,
     temperatureChart,
-    soilChart
+    soilChart,
+    phChart
   },
   data () {
     return {

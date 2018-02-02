@@ -1,7 +1,7 @@
 <template>
   <div class="temperatureChart">
     <div class="container">
-      <div class="card" style="width: 30rem; height:20.5rem; box-shadow: 3px 4px 10px black;">
+      <div class="card" style="width: 30rem; height:20.5rem; left:17%;  box-shadow: 3px 4px 10px black;">
         <br>
       <h3 style=" position : absolute ;top:5%; left:5%;">  อุณหภูมิ  </h3>
         <br>
@@ -11,7 +11,7 @@
           <br>
           <h3 style=" position : absolute ;top:38%; left:40%; font-size : 40px"> C</h3>
           <h7 style=" position : absolute ;top:36%; left:46%; "> o </h7>
-          <h5 style=" position : absolute ;top:60%; left:10%;">ค่าอุณหภูมิปัจจุบัน</h5>
+          <!-- <h5 style=" position : absolute ;top:60%; left:10%;">ค่าอุณหภูมิปัจจุบัน</h5> -->
           <router-link to="temperatureGraph">
       <button type="button" class="btn btn-danger" @click="sendstatus(1)"  style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button>
 </router-link>

@@ -1,19 +1,19 @@
 <template>
   <div class="fertilityChart">
     <div class="container">
-      <div class="card" style="width: 30rem; height:20.5rem; box-shadow: 3px 4px 10px black;">
+      <div class="card" style="width: 30rem; height:20.5rem; left:17%; box-shadow: 3px 4px 10px black;">
         <br>
-      <h3 style=" position : absolute ;top:5%; left:5%;">  สารอาหารในดิน(NPK)  </h3>
+      <h3 style=" position : absolute ;top:5%; left:%;">  สารอาหารในดิน(NPK)  </h3>
         <br>
             <div class="card-block" >
           <canvas id="fertilityChart" style="width:25px; position :relative; left:30%;"></canvas>
-          <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}</h1>
+          <h1  style=" position : absolute ;top:30%; left:15%; font-size : 70px">{{useData[0]}}</h1>
           <br>
-          <h5 style=" position : absolute ;top:60%; left:3%;"> สารอาหารในดิน(NPK)</h5>
+          <!-- <h5 style=" position : absolute ;top:60%; left:3%;"> สารอาหารในดิน(NPK)</h5> -->
           <router-link to="humidityGraph">
       <button type="button" class="btn btn-danger" @click="sendstatus(1)"  style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button>
     </router-link>
-      <div id="circlefertility" class="container-fluid">{{useData[0]}}</div>
+      <div id="circlefertility" class="container-fluid" >{{useData[0]}}</div>
     </div>
   </div>
 </div>

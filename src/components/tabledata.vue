@@ -1,6 +1,6 @@
 <template>
   <div class="tabledata">
-    <table class="table table-warning" style="position: relative; top: 5px;">
+    <table class="table table-warning" style="position: relative; top: 5px;left:25%;">
   <thead class="thead-inverse">
     <tr>
       <th>วัน/เดือน/ปี</th>

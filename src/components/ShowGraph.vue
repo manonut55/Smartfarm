@@ -5,7 +5,7 @@
       <div class="row justify-content-start">
         <div class="col-6">
           <div class="container">
-            <div class="card" style="width: 66.5rem; height:36rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; left:2%;">
+            <div class="card" style="width: 66.5rem; height:36rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; left:20%;">
               <br>
             <h3 style=" position : absolute ;top:5%; left:5%;">  กราฟการเปรียบเทียบข้อมูล  </h3>
               <br><br>
@@ -20,11 +20,11 @@
       <br><br>
       <div class="row justfy-content-start">
         <div class="col-6">
-                <div class="card" style="width:33rem; height:31rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; left:5%;">
+                <div class="card" style="width:33rem; height:31rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; left:20%;">
               <br>
             <h3 style=" position : absolute ;top:7%; left:5%;"> ตารางข้อมูลแปลงที่ปลูกแบบควบคุม  </h3>
               <br>
-                  <table class="table table-info" style="left:0%;">
+                  <table class="table table-info" style="left:0%; top:21%">
                   <thead>
                     <tr>
                       <th>วัน/เดือน/ปี</th>
@@ -45,11 +45,11 @@
                 </div>
         </div>
         <div class="col-6">
-                <div class="card" style="width: 33rem; height:31rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; left:2%;">
+                <div class="card" style="width: 33rem; height:31rem; box-shadow: 3px 4px 10px black; position : relative ;top:5%; left:15%;">
               <br>
             <h3 style=" position : absolute ;top:7%; left:5%;"> ตารางข้อมูลแปลงที่ปลูกแบบชาวบ้าน  </h3>
               <br>
-                  <table class="table table-info" style="left:0%;">
+                  <table class="table table-info" style="left:0%; top:21%">
                   <thead>
                     <tr>
                       <th>วัน/เดือน/ปี</th>
@@ -100,7 +100,7 @@ export default {
         data: {
           labels: this.dateData,
           datasets: [{
-            label: '# of Votes',
+            label: '# NPK1',
             data: this.ferData,
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)'
@@ -111,7 +111,7 @@ export default {
             borderWidth: 1
           },
           {
-            label: '# of Votes2',
+            label: '# ความชื้นในดิน1',
             data: this.soilData,
             backgroundColor: [
               'rgba(161, 199, 52, 0.2)'
@@ -122,7 +122,7 @@ export default {
             borderWidth: 1
           },
           {
-            label: '# of Votes2',
+            label: '# NPK2',
             data: this.fercData,
             backgroundColor: [
               'rgba(161, 199, 52, 0.2)'
@@ -133,7 +133,7 @@ export default {
             borderWidth: 1
           },
           {
-            label: '# of Votes2',
+            label: '# ความชื้นในดิน2',
             data: this.soilcData,
             backgroundColor: [
               'rgba(161, 199, 52, 0.2)'

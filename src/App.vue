@@ -1,8 +1,12 @@
 <template>
   <div id="app">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
     <img src ="https://firebasestorage.googleapis.com/v0/b/smart-farm-78d34.appspot.com/o/picheard.jpg?alt=media&token=04212ba4-041b-471b-9ce4-91ca2b423df0" class="img-fluid" alt="Responsive image">
-    <div id="nav">
-      <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded" style="background-color: #222222;">
+  </div>
+  </div>
+      <div id="nav">
+              <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded" style="background-color: #222222;">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -12,7 +16,7 @@
             <router-link to="/">
               <li>
 
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">หน้าหลัก <span class="sr-only">(current)</span></a>
               </li>
             </router-link>
             <router-link to="tabledata">
@@ -46,16 +50,23 @@
         </div>
       </nav>
     </div>
+
+          <div class="container-fluid" style="background-color: #e2e0e0;">
     <div class="row" style="background-color:  #e2e0e0;">
-      <div class="container" style="background-color: #e2e0e0;">
+      <div class="col-xs-12 col-md-12">
+        <div class="media text-xs-left">
+                <div class="media-left media-middle">
         <br><br>
         <npkalert></npkalert>
         <router-view></router-view>
         <br><br><br><br>
       </div>
+      </div>
+      </div>
+      </div>
     </div>
   </div>
-</template>
+    </template>
 <script>
 import Npkalert from '@/components/Npkalert.vue'
 export default {
