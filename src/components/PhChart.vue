@@ -7,10 +7,10 @@
         <br>
             <div class="card-block" >
           <canvas id="phChart" style="width:25px; position :relative; left:30%;"></canvas>
-          <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}%</h1>
+          <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}</h1>
           <br>
           <!-- <h5 style=" position : absolute ;top:60%; left:3%;"> ความชื้นในดิน</h5> -->
-      <button type="button" class="btn btn-danger" style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button>
+      <!-- <button type="button" class="btn btn-danger" style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button> -->
       <div id="circleph" class="container-fluid">{{useData[0]}}</div>
     </div>
   </div>
@@ -34,7 +34,7 @@ export default {
       var phChart = new Chart(oilCanvasp, {
         type: 'doughnut',
         data: {
-          labels: ['ความชื้นในดิน'],
+          labels: ['ค่าPhในน้ำปุ๋ยจากมูลไก่'],
           datasets: [{
             data: [this.useData[0], (100 - this.useData[0])],
             backgroundColor: [

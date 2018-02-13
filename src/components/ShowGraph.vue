@@ -100,21 +100,21 @@ export default {
         data: {
           labels: this.dateData,
           datasets: [{
-            label: '# NPK1',
+            label: '# NPKจากแปลงปลูกที่ควบคุม',
             data: this.ferData,
             backgroundColor: [
-              'rgba(255, 99, 132, 0.2)'
+              'rgba(255, 0, 0, 0.5)'
             ],
             borderColor: [
-              'rgba(255,99,132,1)'
+              'rgba(25,75,22,1)'
             ],
             borderWidth: 1
           },
           {
-            label: '# ความชื้นในดิน1',
+            label: '# ความชื้นในดินจากแปลงปลูกที่ควบคุม',
             data: this.soilData,
             backgroundColor: [
-              'rgba(161, 199, 52, 0.2)'
+              'rgba(3, 163, 24, 0.1)'
             ],
             borderColor: [
               'rgba(25,75,22,1)'
@@ -122,10 +122,10 @@ export default {
             borderWidth: 1
           },
           {
-            label: '# NPK2',
+            label: '# NPKจากแปลงปลูกแบบชาวบ้าน',
             data: this.fercData,
             backgroundColor: [
-              'rgba(161, 199, 52, 0.2)'
+              'rgba(255, 191, 0, 0.6)'
             ],
             borderColor: [
               'rgba(25,75,22,1)'
@@ -133,10 +133,10 @@ export default {
             borderWidth: 1
           },
           {
-            label: '# ความชื้นในดิน2',
+            label: '# ความชื้นในดินจากแปลงปลูกแบบชาวบ้าน',
             data: this.soilcData,
             backgroundColor: [
-              'rgba(161, 199, 52, 0.2)'
+              'rgba(64, 255, 0, 0.2)'
             ],
             borderColor: [
               'rgba(25,75,22,1)'
@@ -167,7 +167,7 @@ export default {
       console.log(this.dateData)
       for (let index in newdata) {
         this.ferData[index] = newdata[index].Fertility
-        this.soilData[index] = newdata[index].Soilc
+        this.soilData[index] = newdata[index].Soil
         this.fercData[index] = newdata[index].Fertility_compare
         this.soilcData[index] = newdata[index].Soil_compare
         this.timeData[index] = newdata[index].Time

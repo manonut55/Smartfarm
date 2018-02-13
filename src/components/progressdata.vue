@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <div class="row justify-content-start">
       <div class="col-6">
-          <fertility-chart></fertility-chart>
+        <temperature-chart></temperature-chart>
           </div>
       <div class="col-6">
             <humidity-chart></humidity-chart>
@@ -14,7 +14,7 @@
     <br><br>
     <div class="row justify-content-start">
       <div class="col-6">
-          <temperature-chart></temperature-chart>
+        <fertility-chart></fertility-chart>
           </div>
       <div class="col-6">
             <soil-chart></soil-chart>

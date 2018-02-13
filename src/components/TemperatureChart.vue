@@ -3,7 +3,7 @@
     <div class="container">
       <div class="card" style="width: 30rem; height:20.5rem; left:17%;  box-shadow: 3px 4px 10px black;">
         <br>
-      <h3 style=" position : absolute ;top:5%; left:5%;">  อุณหภูมิ  </h3>
+      <h3 style=" position : absolute ;top:5%; left:5%;">  อุณหภูมิในอากาศ  </h3>
         <br>
             <div class="card-block" >
           <canvas id="temperatureChart" style="width:25px; position :relative; left:30%;"></canvas>
