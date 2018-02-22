@@ -8,12 +8,10 @@
           <h3 style=" position : absolute ;top:5%; left:5%;">  กราฟความชื้นในอากาศ  </h3>
             <br>
             <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{humiData[6]}}%</h1>
-            <canvas id="myLineChart" style="width:800px; height:220px; position :relative; left:0%;"  ></canvas>
-
-        </div>
-        </div>
-        </div>
-        </div>
+            </div>
+            </div>
+            </div>
+            </div>
         <br><br><br>
     <div class="row justify-content-start">
       <div class="col-md-6">

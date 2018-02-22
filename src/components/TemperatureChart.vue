@@ -1,7 +1,8 @@
 <template>
   <div class="temperatureChart">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <div class="container">
-      <div class="card" style="width: 30rem; height:20.5rem; left:17%;  box-shadow: 3px 4px 10px black;">
+      <div class="card" style="width: 30rem; height:20.5rem; box-shadow: 3px 4px 10px black;">
         <br>
       <h3 style=" position : absolute ;top:5%; left:5%;">  อุณหภูมิในอากาศ  </h3>
         <br>
@@ -10,11 +11,11 @@
           <h1  style=" position : absolute ;top:30%; left:9%; font-size : 70px">{{useData[0]}}</h1>
           <br>
           <h3 style=" position : absolute ;top:38%; left:40%; font-size : 40px"> C</h3>
-          <h7 style=" position : absolute ;top:36%; left:46%; "> o </h7>
+          <h6 style=" position : absolute ;top:36%; left:46%; "> o </h6>
           <!-- <h5 style=" position : absolute ;top:60%; left:10%;">ค่าอุณหภูมิปัจจุบัน</h5> -->
           <router-link to="temperatureGraph">
       <button type="button" class="btn btn-danger" @click="sendstatus(1)"  style=" position : absolute ;top:75%; left:10%;" >กราฟแสดงค่า</button>
-</router-link>
+</router-link> 
       <div id="circletemperature" class="container-fluid">{{useData[0]}}</div>
     </div>
   </div>
@@ -43,7 +44,6 @@ export default {
             borderColor: [
               '#2072f7',
               '#2072f7']
-
           }]
         },
         options: {
@@ -83,7 +83,7 @@ background: blue;
 border-radius: 60px;
 font-size: 28px;
 color: #fff;
- line-height: 100px;
+line-height: 100px;
 text-align: center;
 position: absolute;
 top: 43.8%;

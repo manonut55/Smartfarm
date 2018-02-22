@@ -9,6 +9,7 @@ import SoilGraph from '@/components/SoilGraph'
 import tabledata from '@/components/tabledata'
 import Npkalert from '@/components/Npkalert'
 import ShowGraph from '@/components/ShowGraph'
+import Clock from '@/components/Clock'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -56,6 +57,11 @@ export default new Router({
       path: '/npkalert',
       name: 'npkalert',
       component: Npkalert
+    },
+    {
+      path: '/clock',
+      name: 'clock',
+      component: Clock
     }
   ]
 })

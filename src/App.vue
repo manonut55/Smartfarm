@@ -1,11 +1,12 @@
 <template>
-  <div id="app">
+    <div id="app">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <div class="row">
-      <div class="col-xs-12 col-md-12">
+            <div class="col-md-12">
     <img src ="https://firebasestorage.googleapis.com/v0/b/smart-farm-78d34.appspot.com/o/picheard.jpg?alt=media&token=04212ba4-041b-471b-9ce4-91ca2b423df0" class="img-fluid" alt="Responsive image">
   </div>
   </div>
-      <div id="nav">
+       <div id="nav">
               <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded" style="background-color: #222222;">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -50,6 +51,7 @@
         </div>
       </nav>
     </div>
+   
 
           <div class="container-fluid" style="background-color: #e2e0e0;">
     <div class="row" style="background-color:  #e2e0e0;">
@@ -77,6 +79,10 @@ export default {
 }
 </script>
 <style>
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
 
 /*#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -125,6 +131,4 @@ export default {
     background-color: #17484C;
     color: #fff;
 }
-
-
 </style>
